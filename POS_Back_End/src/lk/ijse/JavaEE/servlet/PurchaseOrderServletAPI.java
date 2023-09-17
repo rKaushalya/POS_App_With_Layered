@@ -32,7 +32,8 @@ public class PurchaseOrderServletAPI extends HttpServlet {
         try(Connection connection = pool.getConnection()) {
             String orderID = req.getParameter("oid");
 
-            PreparedStatement pstm = connection.prepareStatement("select Orders.oid,Orders.date,Orders.customerID,OrderDetails.itemCode,OrderDetails.qty,OrderDetails.unitPrice from Orders inner join OrderDetails on Orders.oid = OrderDetails.oid where Orders.oid=?");
+            PreparedStatement pstm = connection.prepareStatement("select Orders.oid,Orders.date,Orders.customerID,OrderDetails.itemCode,OrderDetails.qty,OrderDetails.unitPrice from Orders " +
+                    "inner join OrderDetails on Orders.oid = OrderDetails.oid where Orders.oid=?");
             pstm.setObject(1, orderID);
 
             ResultSet rst = pstm.executeQuery();

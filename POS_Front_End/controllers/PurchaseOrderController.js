@@ -187,7 +187,11 @@ function getTableData() {
     for (let i = 0; i < row; i++) {
         let itCode = $("#orderTable").children().eq(i).children(":eq(0)").text();
         let itQty = $("#orderTable").children().eq(i).children(":eq(4)").text();
-        array.push({code: itCode, qty: itQty});
+        if (itCode == ""){
+            console.log("Table are empty!");
+        }else {
+            array.push({code: itCode, qty: itQty});
+        }
     }
     return array;
 }

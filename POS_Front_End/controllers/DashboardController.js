@@ -18,6 +18,9 @@ function saveLastView(clickedID) {
         case "itemContent":
             localStorage.setItem("view", "ITEM");
             break;
+        case "viewOrderContent":
+            localStorage.setItem("view", "VIEWORDER");
+            break;
         case "orderContent":
             localStorage.setItem("view", "ORDER");
             break;
@@ -39,13 +42,16 @@ function setTheLastView() {
         case "ORDER":
             setView($("#orderContent"));
             break;
+        case "VIEWORDER":
+            setView($("#viewOrderContent"));
+            break;
         default:
             setView($("#dashboardContent"));
     }
 }
 
 function clearAll() {
-    $("#dashboardContent,#customerContent,#itemContent,#orderContent").css('display', 'none');
+    $("#dashboardContent,#customerContent,#itemContent,#orderContent,#viewOrderContent").css('display', 'none');
 }
 
 function setView(viewOb) {
@@ -70,6 +76,10 @@ $("#lnkItem").click(function () {
 
 $("#lnkOrders").click(function () {
     setView($("#orderContent"));
+});
+
+$("#lnkViewOrder").click(function () {
+    setView($("#viewOrderContent"));
 });
 
 //end of logics for SPA
