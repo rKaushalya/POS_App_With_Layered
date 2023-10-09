@@ -14,6 +14,7 @@ public class ResponseUtil {
             object.add("data",data[0]);
         }else{
             object.add("data","");
+            System.out.println("test");
         }
 
         return object.build();
