@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Date;
+import java.util.ArrayList;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,4 +16,5 @@ public class PurchaseOrderDTO {
     double balance;
     Date date;
     String cusId;
+    ArrayList<OrderItemsDTO> orderItem = new ArrayList<>();
 }

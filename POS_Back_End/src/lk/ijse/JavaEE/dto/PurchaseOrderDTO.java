@@ -17,6 +17,4 @@ public class PurchaseOrderDTO {
     Date date;
     String cusId;
     ArrayList orderItem = new ArrayList<>();
-
-
 }
