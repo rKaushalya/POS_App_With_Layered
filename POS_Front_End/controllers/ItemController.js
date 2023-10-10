@@ -110,9 +110,9 @@ function getAllItems() {
                 let item = items[i];
                 let code = item.code;
                 let description = item.description;
-                let qtyOnHand = item.qty;
-                let unitPrice = item.unitPrice;
-                let row = `<tr><td>${code}</td><td>${description}</td><td>${qtyOnHand}</td><td>${unitPrice}</td></tr>`;
+                let qty = item.qty;
+                let price = item.price;
+                let row = `<tr><td>${code}</td><td>${description}</td><td>${qty}</td><td>${price}</td></tr>`;
                 $("#tblItem").append(row);
             }
             bindItemTrEvents();
@@ -196,8 +196,8 @@ function updateItem(code) {
                 data: JSON.stringify({
                     code:code,
                     description : itemName,
-                    qtyOnHand : itemQty,
-                    unitPrice : itemPrice
+                    qty : itemQty,
+                    price : itemPrice
                 }),
                 success: function (resp) {
                     alert(resp.message);

@@ -40,7 +40,7 @@ public class ItemServletAPI extends HttpServlet {
                 itemObject.add("code", code);
                 itemObject.add("description", description);
                 itemObject.add("qty", qty);
-                itemObject.add("unitPrice", price);
+                itemObject.add("price", price);
 
                 allItems.add(itemObject.build());
             }
@@ -55,8 +55,8 @@ public class ItemServletAPI extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String code = req.getParameter("code");
         String description = req.getParameter("description");
-        int itemQty = Integer.parseInt(req.getParameter("itemQty"));
-        double unitPrice = Double.parseDouble(req.getParameter("unitPrice"));
+        int itemQty = Integer.parseInt(req.getParameter("qty"));
+        double unitPrice = Double.parseDouble(req.getParameter("price"));
 
         ServletContext servletContext = getServletContext();
         BasicDataSource pool = (BasicDataSource) servletContext.getAttribute("dbcp");
@@ -81,8 +81,8 @@ public class ItemServletAPI extends HttpServlet {
 
         String code = jsonObject.getString("code");
         String description = jsonObject.getString("description");
-        int itemQty = Integer.parseInt(jsonObject.getString("qtyOnHand"));
-        double unitPrice = Double.parseDouble(jsonObject.getString("unitPrice"));
+        int itemQty = Integer.parseInt(jsonObject.getString("qty"));
+        double unitPrice = Double.parseDouble(jsonObject.getString("price"));
 
         ServletContext servletContext = getServletContext();
         BasicDataSource pool = (BasicDataSource) servletContext.getAttribute("dbcp");
