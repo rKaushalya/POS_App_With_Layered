@@ -6,7 +6,7 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/../POS_Back_End_With_Spring/pom.xml" />
+        <option value="$PROJECT_DIR$/POS_Back_End_With_Spring/pom.xml" />
       </list>
     </option>
   </component>

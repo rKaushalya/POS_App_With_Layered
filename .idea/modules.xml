@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/POS_Back_End/POS_Back_End.iml" filepath="$PROJECT_DIR$/POS_Back_End/POS_Back_End.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../POS_Back_End_With_Spring/POS_Back_End_With_Spring.iml" filepath="$PROJECT_DIR$/../POS_Back_End_With_Spring/POS_Back_End_With_Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POS_Back_End_With_Spring/POS_Back_End_With_Spring.iml" filepath="$PROJECT_DIR$/POS_Back_End_With_Spring/POS_Back_End_With_Spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/POS_Front_End/POS_Front_End.iml" filepath="$PROJECT_DIR$/POS_Front_End/POS_Front_End.iml" />
     </modules>
   </component>
