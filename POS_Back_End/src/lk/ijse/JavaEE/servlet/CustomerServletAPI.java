@@ -57,10 +57,10 @@ public class CustomerServletAPI extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String cusID = req.getParameter("cusID");
-        String cusName = req.getParameter("cusName");
-        String cusAddress = req.getParameter("cusAddress");
-        double cusSalary = Double.parseDouble(req.getParameter("cusSalary"));
+        String cusID = req.getParameter("id");
+        String cusName = req.getParameter("name");
+        String cusAddress = req.getParameter("address");
+        double cusSalary = Double.parseDouble(req.getParameter("salary"));
 
         ServletContext servletContext = getServletContext();
         BasicDataSource pool = (BasicDataSource) servletContext.getAttribute("dbcp");

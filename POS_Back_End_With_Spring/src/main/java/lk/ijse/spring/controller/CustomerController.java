@@ -20,10 +20,10 @@ public class CustomerController {
         return new ResponseUtil("Ok","Successfully Added",dto);
     }
 
-    @DeleteMapping(params = {"id"})
-    public ResponseUtil deleteCustomer(String id){
-        service.deleteCustomer(id);
-        return new ResponseUtil("Ok","Successfully Deleted",id);
+    @DeleteMapping(params = {"cusID"})
+    public ResponseUtil deleteCustomer(String cusID){
+        service.deleteCustomer(cusID);
+        return new ResponseUtil("Ok","Successfully Deleted",cusID);
     }
 
     @GetMapping

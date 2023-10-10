@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:8080/pos/";
+// const BASE_URL = "http://localhost:8080/pos/";  //for javaEE
+const BASE_URL = "http://localhost:8080/POS_Back_End_With_Spring_war/"; //for Spring
 
 //load all existing customers
 getAllCustomers();
