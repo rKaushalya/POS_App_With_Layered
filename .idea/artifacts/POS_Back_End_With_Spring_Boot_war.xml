@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="POS_Back_End_With_Spring-Boot:war">
+    <output-path>$PROJECT_DIR$/POS_Back_End_With_Spring-Boot/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>POS_Back_End_With_Spring-Boot</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="POS_Back_End_With_Spring-Boot-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="POS_Back_End_With_Spring-Boot:war exploded" />
+    </root>
+  </artifact>
+</component>

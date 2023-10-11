@@ -40,7 +40,8 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
     public void purchaseOrder(PurchaseOrderDTO dto) {
         Customer customer = cusRepo.findByCusId(dto.getCusId());
 
-        order.save(new OrderDetails(dto.getOId(),dto.getCash(),dto.getBalance(),dto.getDate(),dto.getCusId(),customer,dto.getOrderItem()));
+//        order.save(new OrderDetails(dto.getOId(),dto.getCash(),dto.getBalance(),dto.getDate(),dto.getCusId(),customer,dto.getOrderItem()));
+        order.save(mapper.map(dto,OrderDetails.class));
         ArrayList<OrderItemsDTO> orderItem = dto.getOrderItem();
 
         for (OrderItemsDTO d : orderItem) {

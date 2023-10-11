@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="POS_Back_End_With_Spring" />
+        <module name="POS_Back_End_With_Spring-Boot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="NEW" target="8" />
       <module name="POS_Back_End_With_Spring" target="8" />
+      <module name="POS_Back_End_With_Spring-Boot" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
